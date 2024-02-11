@@ -3,7 +3,7 @@
     width: 35vw;
     height: 30vh;
     background-color: aqua;
-    display: flex;
+    display: none;
     border-radius: 5px;
     align-items: center;
     left: 90%;
@@ -80,4 +80,8 @@
    height: 30px;
    background-color: #001F8B;
   
+}
+
+.open {
+  display: flex;
 }

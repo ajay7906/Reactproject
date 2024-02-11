@@ -1,7 +1,16 @@
 
+import { useState } from 'react';
 import ColorListpop from '../colorlistpop/ColorListpop';
 import './group.css'
 function Group({ name }) {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    //handle on click button
+    const handleButtonClick = () =>{
+       setIsPopupOpen(true)
+    }
+    const handleClosePopup = () => {
+        setIsPopupOpen(false);
+      };
     const nameParts = name.split(' ');
 
     // Get the first letter of the first name and the first letter of the last name
@@ -27,10 +36,10 @@ function Group({ name }) {
                 </div>
             </div>
             <div className='addgroup'>
-                <p>+</p>
+                <p onClick={handleButtonClick}>+</p>
                 
             </div>
-            <ColorListpop/>
+            <ColorListpop isOpen ={isPopupOpen} onClose={handleClosePopup}/>
 
         </div>
     )
