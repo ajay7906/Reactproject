@@ -1,0 +1,83 @@
+.main-popups{
+    position: absolute;
+    width: 35vw;
+    height: 30vh;
+    background-color: aqua;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    left: 90%;
+    top: 75%;
+}
+.relative{
+    padding-left: 3rem;
+    font-weight: bolder;
+}
+.create{
+    text-align: left;
+  
+}
+.create p{
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 6px;
+}
+.group-name{
+    display: flex;
+    gap: 15px;
+}
+.group-name input{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    text-indent: 20px;
+    padding-right: 3rem;
+}
+.group-name input::placeholder{
+    color: gary;
+   
+}
+
+.group-name p{
+    margin: 0;
+    font-size: 20px;
+}
+
+.choose-color{
+    display: flex;
+    align-items: center;
+   
+}
+.choose-color p{
+    font-size: 20px;
+    margin: 0;
+    padding-top: 5px;
+}
+.list-color ul{
+    display: flex;
+    gap: 5px;
+    
+    margin-left: -30px;
+}
+.list-color ul li{
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+   
+}
+.button{
+   position: absolute;
+   right: 15px;
+   bottom: 7px;
+   width: 100px;
+  
+}
+.button button{
+   padding: 0;
+   padding: 3px 15px 5px 15px;
+   height: 30px;
+   background-color: #001F8B;
+  
+}

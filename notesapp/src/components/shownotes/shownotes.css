@@ -1,0 +1,35 @@
+.background{
+    background-color: #DAE5F5;
+    height: 100vh;
+
+}
+.background-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+}
+.image h2{
+    font-size: 35px;
+    margin: 0;
+    
+}
+.encryption{
+    display: flex;
+    padding-top: 8rem;
+    align-items: center;
+    gap: 15px;
+    
+}
+.encryption img
+{
+   width: 20px;
+   height: 20px;
+}

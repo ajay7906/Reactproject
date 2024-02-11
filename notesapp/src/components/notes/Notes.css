@@ -1,0 +1,6 @@
+.main-notes{
+    display: grid;
+    grid-template-columns: 1.1fr 3fr;
+    width: 100vw;
+    
+}
