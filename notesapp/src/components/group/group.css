@@ -14,12 +14,17 @@
 }
 
 .main {
-    background-color: #fff;
+    
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5rem;
     position: relative;
+   
 }
-
+.main h2{
+    position: fixed;
+    top: 0;
+    left: 30px;
+}
 .addgroup {
 
     background-color: #16008B;
@@ -50,5 +55,5 @@
     overflow-y: auto;
     /* Add vertical scrollbar when content overflows vertically */
     white-space: nowrap;
-    max-height: 70vh;
+    max-height: 85vh;
 }

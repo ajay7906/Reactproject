@@ -1,4 +1,5 @@
 import Group from "../group/Group"
+import GroupNotes from "../groupnotes/GroupNotes"
 import ShowNotes from "../shownotes/ShowNotes"
 import './Notes.css'
 
@@ -8,11 +9,12 @@ function Notes() {
 
 
     <div className="main-notes">
-      <div>
+      <div className="group-css">
         <Group name={Name} />
       </div>
-      <div>
-        <ShowNotes />
+      <div className="shownotesdata">
+        {/*<ShowNotes />*/}
+        <GroupNotes/>
       </div>
     </div>
 
