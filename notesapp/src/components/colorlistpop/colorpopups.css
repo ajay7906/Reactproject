@@ -2,7 +2,7 @@
     position: absolute;
     width: 35vw;
     height: 30vh;
-    background-color: aqua;
+    background: rgba(0, 0, 0, 0.5);
     display: none;
     border-radius: 5px;
     align-items: center;
@@ -63,7 +63,7 @@
     list-style: none;
     width: 30px;
     height: 30px;
-    background-color: red;
+    
     border-radius: 50%;
    
 }

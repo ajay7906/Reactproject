@@ -5,20 +5,23 @@
     text-align: center;
     border-radius: 100%;
 }
-.groups{
+
+.groups {
     display: flex;
-   align-items: center;
-   gap: 20px;
-   padding-left: 25px;
+    align-items: center;
+    gap: 20px;
+    padding-left: 25px;
 }
-.main{
+
+.main {
     background-color: #fff;
     text-align: center;
     padding-top: 20px;
     position: relative;
 }
-.addgroup{
-  
+
+.addgroup {
+
     background-color: #16008B;
     width: 55px;
     height: 55px;
@@ -34,7 +37,18 @@
     left: 20%;
     cursor: pointer;
 }
-.group-info{
-   
-   
+
+.group-info {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.group-info-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    /* Add vertical scrollbar when content overflows vertically */
+    white-space: nowrap;
+    max-height: 70vh;
 }

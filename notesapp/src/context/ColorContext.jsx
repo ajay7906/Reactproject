@@ -1,16 +1,22 @@
-{/* import React, { createContext, useState } from 'react';
+ import React, { createContext, useContext, useState } from 'react';
 
 const ColorContext = createContext();
 
-const ColorProvider = ({ children }) => {
-  const [selectedColor, setSelectedColor] = useState(null);
 
-  const setSelected = (color) => {
+
+const ColorProvider = ({ children }) => {
+  // const [selectedColor, setSelectedColor] = useState(null);
+  const [groupName, setGroupName] = useState([]);
+  
+  const groupSelected = (group) =>{
+    setGroupName((prevGroup) =>[...prevGroup, group])
+  }
+ /* const setSelected = (color) => {
     setSelectedColor(color);
-  };
+  }; */
 
   return (
-    <ColorContext.Provider value={{ selectedColor, setSelected }}>
+    <ColorContext.Provider value={{  groupSelected, groupName }}>
       {children}
     </ColorContext.Provider>
   );
@@ -20,7 +26,7 @@ export { ColorProvider, ColorContext };
 
 
 
-
+{/*
 
 
 
