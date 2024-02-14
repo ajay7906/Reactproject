@@ -3,7 +3,7 @@ import './groupnotes.css'
 import SendButton from '../../assets/send.png'
 import { ColorContext } from "../../context/ColorContext";
 function GroupNotes() {
-  const { groupName, selectedGroup, addNote } = useContext(ColorContext);
+  const { groupName, selectedGroup, addNote, notes } = useContext(ColorContext);
   console.log(selectedGroup);
   const [inputValue, setInputValue] = useState('');
   const [contentList, setContentList] = useState([]);
@@ -11,17 +11,21 @@ function GroupNotes() {
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
+ 
 
   const handleSendClick = () => {
-    console.log(selectedGroup);
+     
     if (inputValue.trim() !== '') {
-      addNote(groupName, contentList)
-      setContentList((prevContentList) => [...prevContentList, inputValue]);
+      addNote(selectedGroup, inputValue)
+      setContentList([]); // Clear the content list
+     // setContentList((prevContentList) => [...prevContentList, inputValue]);
       setInputValue(''); // Clear the input after sending
     }
   };
 
-
+  // Filter notes based on the selected group
+  const filteredNotes = notes.filter((note) => note?.group === selectedGroup);
+  console.log(filteredNotes);
 
   return (
     <div className="main-part">
@@ -49,10 +53,9 @@ function GroupNotes() {
 
         <div className="content-data">
           {
-            contentList.map((content, index) => (
-              <p key={index}>{content}</p>
+            filteredNotes.map((note, index) => (
+              <p key={index}>{note.content}</p>
             ))
-
           }
         </div>
       </div>
