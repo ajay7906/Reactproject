@@ -5,18 +5,19 @@ const ColorContext = createContext();
 
 
 const ColorProvider = ({ children }) => {
-  // const [selectedColor, setSelectedColor] = useState(null);
+   const [selectedGroup, setSelectedGroup] = useState(null);
   const [groupName, setGroupName] = useState([]);
+  const [notes, setNotes] = useState([]);
   
   const groupSelected = (group) =>{
     setGroupName((prevGroup) =>[...prevGroup, group])
   }
- /* const setSelected = (color) => {
-    setSelectedColor(color);
-  }; */
+  const addNote = (group, content) => {
+    setNotes((prevNotes) => [...prevNotes, { group, content }]);
+  };
 
   return (
-    <ColorContext.Provider value={{  groupSelected, groupName }}>
+    <ColorContext.Provider value={{ selectedGroup, notes,addNote, setSelectedGroup, groupSelected, groupName }}>
       {children}
     </ColorContext.Provider>
   );

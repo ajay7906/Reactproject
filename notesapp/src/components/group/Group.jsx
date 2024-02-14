@@ -4,10 +4,10 @@ import ColorListpop from '../colorlistpop/ColorListpop';
 import './group.css'
 import { ColorContext } from '../../context/ColorContext';
 function Group({ name }) {
-    const { groupName } = useContext(ColorContext);
+    const { groupName, setSelectedGroup, selectedGroup } = useContext(ColorContext);
 
 
-    //console.log(groupName);
+   
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     //handle on click button
     const handleButtonClick = () => {
@@ -16,13 +16,9 @@ function Group({ name }) {
     const handleClosePopup = () => {
         setIsPopupOpen(false);
     };
-    const nameParts = name.split(' ');
-
+   
     // Get the first letter of the first name and the first letter of the last name
-    const initials =
-        nameParts.length >= 2
-            ? nameParts[0].charAt(0).toUpperCase() + nameParts[1].charAt(0).toUpperCase()
-            : name.charAt(0).toUpperCase();
+  
     return (
         <div className='main'>
             <h2>Pocket Notes</h2>
@@ -30,8 +26,8 @@ function Group({ name }) {
                 <div className='group-info'>
                     {
                         groupName.map((group, index) => (
-                            <div key={index} className="groups">
-                                <p style={{ background: `${group.color}` }} className="short">{initials}</p>
+                            <div key={index} className="groups" onClick={()=> setSelectedGroup(group)} >
+                                <p style={{ background: `${group.color}` }} className="short">{group.short}</p>
                                 <p>{group.name}</p>
                             </div>
 

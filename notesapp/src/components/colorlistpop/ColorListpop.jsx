@@ -4,23 +4,31 @@ import { ColorContext } from '../../context/ColorContext';
 
 function ColorListpop({ isOpen, onClose }) {
     const { groupSelected } = useContext(ColorContext);
+   
     const [groupName, setGroupName] = useState('');
     const [currentId, setCurrentId] = useState(0);
     const [selectedColor, setSelectedColor] = useState();
     const colors = ['#B38BFA', '#FF79F2', '#43E6FC', '#F19576', '#0047FF', '#6691FF'];
+    const nameParts = groupName.split(' ');
+    const initials =
+        nameParts.length >= 2
+            ? nameParts[0].charAt(0).toUpperCase() + nameParts[1].charAt(0).toUpperCase()
+            : groupName.charAt(0).toUpperCase();
 
     const modalRef = useRef();
-  
+
     const handleCreateGroup = (e) => {
         e.preventDefault();
         const newGroup = {
             name: groupName,
             color: selectedColor,
-            id:currentId
+            id: currentId,
+            short:initials
+
         };
-        console.log(currentId);
+      
         setCurrentId(currentId + 1);
-        console.log(newGroup);
+        
         groupSelected(newGroup);
         onClose();
     };
