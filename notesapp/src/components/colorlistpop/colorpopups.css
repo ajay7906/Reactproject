@@ -1,24 +1,25 @@
 .main-popups{
-    position: absolute;
-    width: 35vw;
+    position: fixed;
+    width: 45vw;
     height: 30vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: #0cd724;
     display: none;
     border-radius: 5px;
     align-items: center;
-    left: 90%;
-    top: 75%;
+    left: 25%;
+    top: 30%;
 }
 .relative{
     padding-left: 3rem;
     font-weight: bolder;
+    font-size: 20px;
 }
 .create{
     text-align: left;
   
 }
 .create p{
-  font-size: 20px;
+  
   margin: 0;
   padding-bottom: 6px;
 }
@@ -27,7 +28,7 @@
     gap: 15px;
 }
 .group-name input{
-    border: none;
+    border: 1px solid gray;
     outline: none;
     border-radius: 30px;
     text-indent: 20px;
@@ -40,7 +41,7 @@
 
 .group-name p{
     margin: 0;
-    font-size: 20px;
+   
 }
 
 .choose-color{
@@ -49,7 +50,7 @@
    
 }
 .choose-color p{
-    font-size: 20px;
+  
     margin: 0;
     padding-top: 5px;
 }
@@ -84,4 +85,36 @@
 
 .open {
   display: flex;
+}
+
+/*start media query from here*/
+@media (max-width: 1000px){
+    .relative{
+        font-size:15px ;
+        padding-left: 1rem;
+    }
+}
+@media (max-width: 768px){
+    .main-popups{
+        width: 60vw;
+        height: 22vh;
+       
+    }
+    .relative{
+        font-size:10px ;
+        padding-left: 1rem;
+    }
+    .group-name input{
+        padding-right: 0;
+        width: 120px;
+    }
+    .list-color ul li{
+        width: 15px;
+        height: 15px;
+    }
+    .group-name input::placeholder{
+    font-size: 10px;
+   
+}
+
 }

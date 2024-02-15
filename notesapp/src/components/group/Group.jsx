@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import ColorListpop from '../colorlistpop/ColorListpop';
 import './group.css'
 import { ColorContext } from '../../context/ColorContext';
-function Group({ name }) {
+function Group({ handleGroupClick }) {
     const { groupName, setSelectedGroup, selectedGroup } = useContext(ColorContext);
 
 
@@ -26,7 +26,7 @@ function Group({ name }) {
                 <div className='group-info'>
                     {
                         groupName.map((group, index) => (
-                            <div key={index} className="groups" onClick={()=> setSelectedGroup(group)} >
+                            <div key={index} className="groups" onClick={()=> {setSelectedGroup(group); handleGroupClick()}} >
                                 <p style={{ background: `${group.color}` }} className="short">{group.short}</p>
                                 <p>{group.name}</p>
                             </div>

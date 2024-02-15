@@ -2,7 +2,8 @@ import { useContext, useState } from "react"
 import './groupnotes.css'
 import SendButton from '../../assets/send.png'
 import { ColorContext } from "../../context/ColorContext";
-function GroupNotes() {
+import Back from '../../assets/back.png'
+function GroupNotes({handleBackClick}) {
   const { groupName, selectedGroup, addNote, notes } = useContext(ColorContext);
   console.log(selectedGroup);
   const [inputValue, setInputValue] = useState('');
@@ -41,6 +42,9 @@ function GroupNotes() {
           )) */
 
         }
+        <div className="back">
+          <img src={Back} alt="" onClick={handleBackClick} />
+        </div>
         <div className="groups">
           <p style={{ background: `${selectedGroup?.color}` }} className="short">{selectedGroup?.short}</p>
           <p>{selectedGroup?.name}</p>

@@ -9,22 +9,26 @@
 .groups {
     display: flex;
     align-items: center;
+
     gap: 20px;
     padding-left: 25px;
 }
 
 .main {
-    
+
     text-align: center;
-    padding-top: 5rem;
+ 
     position: relative;
    
+
 }
-.main h2{
+
+.main h2 {
     position: fixed;
     top: 0;
     left: 30px;
 }
+
 .addgroup {
 
     background-color: #16008B;
@@ -46,14 +50,29 @@
 .group-info {
     display: flex;
     flex-direction: column;
+   
+    overflow-y: scroll;
+    white-space: nowrap;
+    max-height: 80vh;
 
 
 }
 
 .group-info-container {
-    overflow-x: auto;
-    overflow-y: auto;
-    /* Add vertical scrollbar when content overflows vertically */
-    white-space: nowrap;
-    max-height: 85vh;
+
+
+    padding-top: 3rem;
+}
+
+
+/* /media query start */
+@media (max-width: 768px) {
+    .main {
+        width: 100vw;
+     
+
+    }
+    .group-info-container{
+       
+    }
 }
