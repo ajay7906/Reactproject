@@ -1,87 +1,109 @@
-.top-part{
+.top-part {
     background-color: #001F8B;
-   display: flex;
-   justify-content: start;
-   align-items: center;
-   gap: 50x;
-   padding-left: 50px;
-  
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 50x;
+    padding-left: 50px;
+
 }
-.main-part{
-   background-color: #DAE5F5;
-   position: relative;
-  
- 
+
+.main-part {
+    background-color: #DAE5F5;
+    position: relative;
+
+
 }
-.input-notes{
+
+.input-notes {
     display: grid;
     justify-content: center;
     align-items: center;
-   
+
     position: fixed;
     width: 100%;
     bottom: 0;
     height: 20vh;
-   
+
     background-color: #001F8B;
-    
+
 }
-.input-notes input{
+
+.input-notes textarea {
     width: 65vw;
     height: 14vh;
     margin-left: -25vw;
-    background-color: aquamarine;
-   
+    padding-top: 15px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 15pxs;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+
 }
-.all-content{
+.input-notes textarea::-webkit-scrollbar {
+    /* width of the entire scrollbar */
+    background: none;
+  }
+
+.all-content {
     max-height: 66vh;
     height: 66vh;
     padding-bottom: 4vh;
     display: flex;
     overflow-y: auto;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     align-items: center;
     padding-left: 20px;
+
 }
-.content-data{
-   
+
+.content-data {
+
     margin-top: 20px;
     width: 66vw;
-    
+
     align-items: center;
 }
-.input-notes img{
+
+.input-notes img {
     position: fixed;
-    z-index: 1000;
+   
     width: 30px;
     cursor: pointer;
     right: 40px;
     bottom: 55px;
 }
-.content-data p{
+
+.content-data p {
     background-color: #fff;
     padding: 10px;
-    
+    border-radius: 5px;
+
 }
 
-@media (max-width: 768px){
-    .main-part{
+@media (max-width: 768px) {
+    .main-part {
         width: 100vw;
     }
-    .all-content{
+
+    .all-content {
         height: 66vh;
         overflow: scroll;
         padding-bottom: 4vh;
 
     }
-    .input-notes{
+
+    .input-notes {
         padding: 0;
         width: 100vw;
     }
-    .input-notes input{
+
+    .input-notes textarea {
         margin-left: 0;
-        width: 82vw;
+        width: 100vw;
+        padding-left: 12px;
         height: 14vh;
     }
 }
