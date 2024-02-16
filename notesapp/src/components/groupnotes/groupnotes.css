@@ -41,6 +41,26 @@
     outline: none;
 
 }
+.groups{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+    padding-left: 25px;
+    
+}
+.back:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+  
+    border-radius: 50%;
+}
+.groups .short{
+    width: 25px;
+    padding: 7px;
+    background-color: green;
+    text-align: center;
+    border-radius: 100%;
+}
 .input-notes textarea::-webkit-scrollbar {
     /* width of the entire scrollbar */
     background: none;
@@ -83,11 +103,13 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 780px) {
     .main-part {
         width: 100vw;
     }
-
+    .input-notes img{
+        right: 10%;
+    }
     .all-content {
         height: 66vh;
         overflow: scroll;
@@ -102,7 +124,7 @@
 
     .input-notes textarea {
         margin-left: 0;
-        width: 100vw;
+        width: 80vw;
         padding-left: 12px;
         height: 14vh;
     }

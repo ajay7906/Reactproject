@@ -7,11 +7,18 @@
     
 }
 .group-css{
-    background-color: aqua;
+    background-color: rgb(229, 239, 232);
     height:100vh;
    
 }
 .shownotesdata{
     height: 100vh;
+    
    
+}
+
+@media (max-width: 780px){
+    .shownotesdata{
+       
+    }
 }

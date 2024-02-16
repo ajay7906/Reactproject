@@ -2,7 +2,7 @@
     position: fixed;
     width: 45vw;
     height: 30vh;
-    background: #0cd724;
+    background: #f1f5f2;
     display: none;
     border-radius: 5px;
     align-items: center;
@@ -95,7 +95,7 @@
         padding-left: 1rem;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 780px){
     .main-popups{
         width: 60vw;
         height: 22vh;

@@ -26,7 +26,7 @@ function Group({ handleGroupClick }) {
                 <div className='group-info'>
                     {
                         groupName.map((group, index) => (
-                            <div key={index} className="groups" onClick={()=> {setSelectedGroup(group); handleGroupClick()}} >
+                            <div key={index} className="groupss" onClick={()=> {setSelectedGroup(group); handleGroupClick()}} >
                                 <p style={{ background: `${group.color}` }} className="short">{group.short}</p>
                                 <p>{group.name}</p>
                             </div>

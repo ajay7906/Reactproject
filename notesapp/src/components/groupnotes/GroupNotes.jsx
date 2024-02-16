@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import './groupnotes.css'
 import SendButton from '../../assets/send.png'
 import Enable from '../../assets/enable.png'
@@ -6,9 +6,13 @@ import { ColorContext } from "../../context/ColorContext";
 import Back from '../../assets/back.png'
 function GroupNotes({ handleBackClick }) {
   const { groupName, selectedGroup, addNote, notes } = useContext(ColorContext);
-  console.log(selectedGroup);
+ 
   const [inputValue, setInputValue] = useState('');
   const [contentList, setContentList] = useState([]);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+ 
+
+ 
 
   //time and date
   const getCurrentTime = () => {
@@ -37,30 +41,44 @@ function GroupNotes({ handleBackClick }) {
     if (inputValue.trim() !== '') {
       const timestamp = getCurrentTime();
 
-      addNote(selectedGroup, { content: inputValue, time:timestamp })
-      setContentList([]); // Clear the content list
+      addNote(selectedGroup, { content: inputValue, time: timestamp })
+     // setContentList([]); // Clear the content list
 
       setInputValue(''); // Clear the input after sending
     }
   };
 
   // Filter notes based on the selected group
-  const filteredNotes = notes.filter((note) => note?.group === selectedGroup);
-  const dataCheck = filteredNotes.map((note, index) => {
-    return note.content;
-  })
- console.log(dataCheck);
+ 
+  const filteredNotess = notes.filter((note) => note?.group.id === selectedGroup.id);
+ 
+ 
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="main-part">
       <div className="top-part">
 
-        <div className="back">
-          <img src={Back} alt="" onClick={handleBackClick} />
-        </div>
-        <div className="groups">
+      {windowWidth <= 780 && (
+          <div className="back" style={{cursor:'pointer'}}>
+            <img src={Back} alt="" onClick={handleBackClick} />
+          </div>
+        )}
+        <div className="groups" style={{color:'#fff'}}>
           <p style={{ background: `${selectedGroup?.color}` }} className="short">{selectedGroup?.short}</p>
-          <p>{selectedGroup?.name}</p>
+          <p >{selectedGroup?.name}</p>
 
         </div>
 
@@ -69,8 +87,11 @@ function GroupNotes({ handleBackClick }) {
 
         <div className="content-data">
           {
-            filteredNotes.map((note, index) => (
-              <p key={index}>{note.content.content} <br /> * {note.content.time}</p>
+            filteredNotess.map((note, index) => (
+              <>
+                <p style={{paddingBottom:'25px', fontSize:'15px'}} key={index}>{note.content.content} <span style={{fontSize:'12px', float:'right', marginTop:'6px'}}>{note.content.time}</span> </p>
+                
+              </>
             ))
           }
         </div>
