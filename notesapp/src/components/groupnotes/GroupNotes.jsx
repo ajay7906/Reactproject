@@ -8,7 +8,7 @@ function GroupNotes({ handleBackClick }) {
   const { groupName, selectedGroup, addNote, notes } = useContext(ColorContext);
  
   const [inputValue, setInputValue] = useState('');
-  const [contentList, setContentList] = useState([]);
+ 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
  
 
@@ -97,7 +97,7 @@ function GroupNotes({ handleBackClick }) {
         </div>
       </div>
       <div className="input-notes">
-        {  /*  <img src={SendButton} onClick={handleSendClick} alt="" />  */}
+      
         {inputValue.trim() ? (
           <img src={Enable} alt="" onClick={handleSendClick} />
         ) : (

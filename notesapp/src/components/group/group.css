@@ -14,7 +14,7 @@
     padding-left: 25px;
 }
 .groupss:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .main {
@@ -53,7 +53,7 @@
 .group-info {
     display: flex;
     flex-direction: column;
-   
+    padding-top: 15px;
     overflow-y: scroll;
     white-space: nowrap;
     max-height: 90vh;

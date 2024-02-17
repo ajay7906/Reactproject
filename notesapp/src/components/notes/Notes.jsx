@@ -16,7 +16,7 @@ function Notes() {
 
     setShowGroup('none');
     setShowNotes('block');
-    // setIsMobile(false);
+   
   };
 
   const handleBackClick = () => {
@@ -47,10 +47,7 @@ function Notes() {
 
 
     <div className="main-notes">
-      {/*display: selectedGroup!==null && windowWidth <= 768
-      display:selectedGroup===null && windowWidth <= 768
-
-       */}
+    
 
 
       {

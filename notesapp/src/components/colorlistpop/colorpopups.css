@@ -2,7 +2,7 @@
     position: fixed;
     width: 45vw;
     height: 30vh;
-    background: #f1f5f2;
+    background: #fff;
     display: none;
     border-radius: 5px;
     align-items: center;
@@ -74,11 +74,14 @@
    right: 15px;
    bottom: 7px;
    width: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
   
 }
 .button button{
-   padding: 0;
-   padding: 3px 15px 5px 15px;
+   
+    padding: 0px 15px 5px 15px;
    height: 30px;
    background-color: #001F8B;
   
@@ -97,8 +100,10 @@
 }
 @media (max-width: 780px){
     .main-popups{
-        width: 60vw;
+        width: 65vw;
         height: 22vh;
+        left: 20%;
+        
        
     }
     .relative{
