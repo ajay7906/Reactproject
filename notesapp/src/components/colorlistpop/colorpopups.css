@@ -14,6 +14,7 @@
     padding-left: 3rem;
     font-weight: bolder;
     font-size: 20px;
+    color:#7a5f5ffb;
 }
 .create{
     text-align: left;
@@ -109,6 +110,7 @@
     .relative{
         font-size:10px ;
         padding-left: 1rem;
+        
     }
     .group-name input{
         padding-right: 0;

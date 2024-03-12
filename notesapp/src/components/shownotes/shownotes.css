@@ -10,15 +10,18 @@
     align-items: center;
     height: 100vh;
     text-align: center;
+    color:#7a5f5ffb;
 }
 .image{
     display: flex;
     flex-direction: column;
     width: 40vw;
+   
 }
 .image h2{
     font-size: 35px;
     margin: 0;
+    
     
 }
 .encryption{

@@ -39,6 +39,8 @@
     padding-right: 15pxs;
     font-family: 'Roboto', sans-serif;
     outline: none;
+    background-color: #fff;
+    color: rgb(54, 50, 50);
 
 }
 .groups{

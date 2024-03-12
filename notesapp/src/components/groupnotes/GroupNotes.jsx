@@ -89,7 +89,7 @@ function GroupNotes({ handleBackClick }) {
           {
             filteredNotess.map((note, index) => (
               <>
-                <p style={{paddingBottom:'25px', fontSize:'15px'}} key={index}>{note.content.content} <span style={{fontSize:'12px', float:'right', marginTop:'6px'}}>{note.content.time}</span> </p>
+                <p style={{paddingBottom:'25px', fontSize:'15px', color:'gray'}} key={index}>{note?.content?.content} <span style={{fontSize:'12px', float:'right', marginTop:'6px'}}>{note?.content?.time}</span> </p>
                 
               </>
             ))
